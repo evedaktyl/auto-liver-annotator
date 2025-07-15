@@ -28,7 +28,7 @@ def rotate_90_c(arr: np.ndarray) -> np.ndarray:
             new_arr[i, j] = arr[w - 1 - j, i]
     return new_arr
 
-def resize_image(arr: np.ndarray, target_size=(1024, 1024)) -> np.ndarray:
+def resize_image(arr: np.ndarray, target_size=(512, 512)) -> np.ndarray:
     from PIL import Image
     pil = Image.fromarray(arr)
     resized = pil.resize(target_size, resample=Image.NEAREST if arr.ndim == 2 else Image.BILINEAR)
